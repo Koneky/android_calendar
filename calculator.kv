@@ -1,0 +1,130 @@
+#:kivy 2.2.0
+
+<CalculatorUI>:
+    orientation: "vertical"
+    padding: "10dp"
+    spacing: "10dp"
+
+    # Экран
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.25
+        MDLabel:
+            text: root.expression
+            halign: "right"
+            font_style: "Body1"
+            theme_text_color: "Hint"
+        MDLabel:
+            text: root.result
+            halign: "right"
+            font_style: "H3"
+        
+    # Сетка кнопок
+    GridLayout:
+        cols: 4
+        size_hint_y: 0.75
+        spacing: "5dp"
+
+        # Каждая кнопка занимет равную долю по ширине
+        MDRaisedButton:
+            text: "%"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "CE"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "C"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "<-"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+
+        MDRaisedButton:
+            text: "1/x"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "x²"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "√"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "/"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        
+        MDRaisedButton:
+            text: "7"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "8"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "9"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "*"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        
+        MDRaisedButton:
+            text: "4"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "5"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "6"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "-"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        
+        MDRaisedButton:
+            text: "1"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "2"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "3"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "+"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+
+        MDRaisedButton:
+            text: "±"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "0"
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "."
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
+        MDRaisedButton:
+            text: "="
+            md_bg_color: (0, 0.5, 1, 1)
+            size_hint: (1, 1)
+            on_release: root.button_press(self.text)
